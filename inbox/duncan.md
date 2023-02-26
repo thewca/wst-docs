@@ -22,6 +22,13 @@
 - statistics 
   - updates twice per week
 
+- common email queries
+
+- Importing Registration Data
+  - Import CSV format is the same as the format of the CSV you get when exporting registration data fro a competition
+  - Refer to the (Example CSV)[https://drive.google.com/file/d/1yWInQOOOe23satlm7igEAeaQOCYK3Nii/view?usp=sharing]
+  - TODO: make a list of field names and input requirements
+
 # TODO
 
 [ ] Import everything that I've pinned in wst-project-management into the project management section
