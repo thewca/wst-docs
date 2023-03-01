@@ -1,9 +1,43 @@
 # Random notes: 
 
+- maintenance load not technical debt: https://stackoverflow.blog/2023/02/27/stop-saying-technical-debt/?cb=1
+
+- registration opening query:
+  select id, registration_open, competitor_limit from Competitions
+  where registration_open between '2023-02-26' and '2023-03-01'
+  order by registration_open
+
+- codebase style suggestions
+  - avoid implicits wherever possible - implicits are VERY confusing for new contributors, and being explicit makes it easier for people who aren't you to follow what your code is doing
+    - use explicit returns in fucntions
+    - use brackets() for function calls - even when there are no arguments
+
+# Beginner's guide to contributing
+
+1. Learn Ruby
+> Odin project Ruby section is great, a few hours if you are already experienced in another language
 
 
+
+2. Learn Rails
+> (This stackoverflow summary)[https://stackoverflow.com/questions/5205002/summary-of-ruby-on-rails-fundamental-concepts]
+> The Odin Project has a great course
+> Video lesson
+> Our own introductions
+
+
+2. Setting up a local copy of the website
+
+3. Running the local copy of the website
+> bringing in a database
+> updating your branch
 
 # Wiki ideas: 
+
+- support requests
+  - changing email for delegate
+    - WRT handles this
+
 
 - general noob notes
   - code in the docker instance changes when you switch git branches
