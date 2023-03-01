@@ -2,6 +2,8 @@
 
 - maintenance load not technical debt: https://stackoverflow.blog/2023/02/27/stop-saying-technical-debt/?cb=1
 
+- creating warnings on results validation is done by WST - WRT has no special tools to do this.
+
 - registration opening query:
   select id, registration_open, competitor_limit from Competitions
   where registration_open between '2023-02-26' and '2023-03-01'
@@ -20,11 +22,24 @@
 
 
 2. Learn Rails
+> This rails guide is phenomenal at showing you the conventions of Rails, and giving you a taste of its power: https://guides.rubyonrails.org/getting_started.html
 > (This stackoverflow summary)[https://stackoverflow.com/questions/5205002/summary-of-ruby-on-rails-fundamental-concepts]
 > The Odin Project has a great course
 > Video lesson
 > Our own introductions
 
+## Seeing through rails magic
+https://www.youtube.com/watch?v=rssgWqJq-14
+
+## Why rails?
+
+Great discussion on reddit:
+https://www.reddit.com/r/rails/comments/aho9g0/hoping_to_view_rails_magic_through_a_different/
+https://medium.com/swlh/the-ups-and-downs-of-rails-magic-5a88c7f68064
+https://rubyonrails.org/doctrine
+
+
+Once you know rails, your fluency in the code goes up MASSIVELY. But, it is a barrier to contributing. 
 
 2. Setting up a local copy of the website
 
