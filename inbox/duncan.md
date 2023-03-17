@@ -1,5 +1,7 @@
 # Random notes: 
 
+- example of good code commenting: https://github.com/ablakey/gameboy/blob/master/src/guest/systems/ppu.rs
+
 - maintenance load not technical debt: https://stackoverflow.blog/2023/02/27/stop-saying-technical-debt/?cb=1
 
 - creating warnings on results validation is done by WST - WRT has no special tools to do this.
@@ -14,7 +16,40 @@
     - use explicit returns in fucntions
     - use brackets() for function calls - even when there are no arguments
 
+
+# Ruby cheatsheet
+
+## Commands
+Generate a model: `bin/rails generate model <model_name> <property_name:property_type>`
+  - <model_name> is singular, and capitalised (eg, "User")
+  - Property types: `string`, `text`
+  - After property names, you can use <other_model_name:references>, eg `user:references`
+  - This creates the following:
+    - db/migrate/<migration script>
+    - app/models/<model_name>.rb 
+    - test/models/<model_name>\_test.rb  	<= Testing harness for the comment model
+    - test/fixtures/<model_name>.yml  <= Samples of the model for use in testing
+  - if the model you created references another model, update the model file of the associated model with a `has_many` clause
+
+Generate a controller: `bin/rails generate controller Comments`
+  - This creates the following:
+    - app/controllers/<controller_name>\_controller.rb <= controller file
+    - app/views/comments <= stores views for the controller
+      - Note that a controller is a file, but its views are in a folder. One controller can have many views (eg, to execute different CRUD operations on a model)
+    - test/controllers/<controller_name>\_controller_test.rb <= tests for controller
+    - apps/helpers/<controller_name>\_helper.rb <= helper file for the view (not really sure what this does yet)
+
+## Route definitions
+
 # Beginner's guide to contributing
+
+## Contributing workflow
+
+- write PR
+- run pre-commit hooks (how to do this?)
+- run tests (how to do this?)
+
+## Learning the stack
 
 1. Learn Ruby
 > Odin project Ruby section is great, a few hours if you are already experienced in another language
@@ -22,6 +57,7 @@
 
 
 2. Learn Rails
+> Diagram of overall architecture: https://se-education.org/learningresources/contents/ruby/mvc.jpeg
 > This rails guide is phenomenal at showing you the conventions of Rails, and giving you a taste of its power: https://guides.rubyonrails.org/getting_started.html
 > (This stackoverflow summary)[https://stackoverflow.com/questions/5205002/summary-of-ruby-on-rails-fundamental-concepts]
 > The Odin Project has a great course
