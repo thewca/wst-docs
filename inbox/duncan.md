@@ -16,6 +16,16 @@
     - use explicit returns in fucntions
     - use brackets() for function calls - even when there are no arguments
 
+## To Learn
+#### Rails
+- [x] Route syntax
+- [x] Passing variables from model to controller to view
+- [x] Forms (passing data from view to controller)
+- [ ] Editing database entries
+- [ ] Deleting database entries
+- [ ] Object associations
+
+
 
 # Ruby cheatsheet
 
@@ -27,21 +37,33 @@ Generate a model: `bin/rails generate model <model_name> <property_name:property
   - This creates the following:
     - db/migrate/<migration script>
     - app/models/<model_name>.rb 
-    - test/models/<model_name>\_test.rb  	<= Testing harness for the comment model
-    - test/fixtures/<model_name>.yml  <= Samples of the model for use in testing
+    - test/models/<model_name>\_test.rb  = Testing harness for the comment model
+    - test/fixtures/<model_name>.yml  = Samples of the model for use in testing
   - if the model you created references another model, update the model file of the associated model with a `has_many` clause
 
 Generate a controller: `bin/rails generate controller Comments`
   - This creates the following:
-    - app/controllers/<controller_name>\_controller.rb <= controller file
-    - app/views/comments <= stores views for the controller
+    - app/controllers/<controller_name>\_controller.rb = controller file
+    - app/views/comments = stores views for the controller
       - Note that a controller is a file, but its views are in a folder. One controller can have many views (eg, to execute different CRUD operations on a model)
-    - test/controllers/<controller_name>\_controller_test.rb <= tests for controller
-    - apps/helpers/<controller_name>\_helper.rb <= helper file for the view (not really sure what this does yet)
+    - test/controllers/<controller_name>\_controller_test.rb = tests for controller
+    - apps/helpers/<controller_name>\_helper.rb = helper file for the view (not really sure what this does yet)
 
 ## Route definitions
 
-# Beginner's guide to contributing
+Routes determines which _controller_ to pass an HTTP call to.
+
+
+
+Example definition:
+	`get "/articles", to: "articles#index"`
+	<HTTP-call> "<url-suffic>", to: "<controller>#<function>"
+
+	`root "#articles#index"` - sets homepage 
+	root "<controller>#<function>"
+
+
+# Beginners guide to contributing
 
 ## Contributing workflow
 
@@ -117,3 +139,4 @@ Once you know rails, your fluency in the code goes up MASSIVELY. But, it is a ba
 # TODO
 
 [ ] Import everything that I've pinned in wst-project-management into the project management section
+
